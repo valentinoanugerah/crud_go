@@ -1,13 +1,9 @@
-package models
+package models 
 
-import (
-	"time"
-
-	"github.com/google/uuid"
-)
+import "time"
 
 type User struct {
-	ID        uuid.UUID `gorm:"primaryKey;autoIncrement"`
+	ID        uint      `gorm:"primaryKey;autoIncrement"`
 	Name      string    `gorm:"type:varchar(100)"`
 	Email     string    `gorm:"type:varchar(100);unique;not null"`
 	Password  string    `gorm:"type:text;not null"`

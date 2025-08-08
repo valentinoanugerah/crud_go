@@ -3,11 +3,11 @@ package models
 import (
 	"time"
 
-	"github.com/google/uuid"
+
 )
 
 type AuditLog struct {
-	ID          uuid.UUID      `gorm:"primaryKey;autoIncrement"`
+	ID          uint     `gorm:"primaryKey;autoIncrement"`
 	UserID      uint
 	User        User
 	Action      string    `gorm:"type:varchar(100)"`

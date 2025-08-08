@@ -1,13 +1,9 @@
 package models
 
-import (
-	"time"
-
-	"github.com/google/uuid"
-)
+import "time"
 
 type Product struct {
-	ID          uuid.UUID      `gorm:"primaryKey;autoIncrement"`
+	ID          uint      `gorm:"primaryKey;autoIncrement"`
 	Name        string    `gorm:"type:varchar(100);not null"`
 	Description string    `gorm:"type:text"`
 	Price       float64   `gorm:"type:numeric(12,2)"`

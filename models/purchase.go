@@ -1,13 +1,9 @@
 package models
 
-import (
-	"time"
-
-	"github.com/google/uuid"
-)
+import "time"
 
 type Purchase struct {
-	ID           uuid.UUID      `gorm:"primaryKey;autoIncrement"`
+	ID           uint      `gorm:"primaryKey;autoIncrement"`
 	SupplierID   uint
 	Supplier     Supplier
 	PurchaseDate time.Time

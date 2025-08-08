@@ -3,11 +3,11 @@ package models
 import (
 	"time"
 
-	"github.com/google/uuid"
+	
 )
 
 type Sale struct {
-	ID         uuid.UUID      `gorm:"primaryKey;autoIncrement"`
+	ID         uint     `gorm:"primaryKey;autoIncrement"`
 	CustomerID uint
 	Customer   Customer
 	SaleDate   time.Time

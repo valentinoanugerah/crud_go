@@ -1,9 +1,9 @@
 package models
 
-import "github.com/google/uuid"
+
 
 type SaleItem struct {
-	ID        uuid.UUID    `gorm:"primaryKey;autoIncrement"`
+	ID        uint    `gorm:"primaryKey;autoIncrement"`
 	SaleID    uint
 	Sale      Sale
 	ProductID uint
